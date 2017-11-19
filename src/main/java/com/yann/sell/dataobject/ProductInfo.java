@@ -1,15 +1,11 @@
 package com.yann.sell.dataobject;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.yann.sell.enums.ProductStatusEnum;
-import com.yann.sell.utils.EnumUtil;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.math.BigDecimal;
-import java.util.Date;
 
 /**
  * 商品

@@ -53,13 +53,13 @@ public class BuyerProductController {
 
         //3. 数据拼装
         List<ProductVO> productVOList = new ArrayList<>();
-        for (ProductCategory productCategory: productCategoryList) {
+        for (ProductCategory productCategory : productCategoryList) {
             ProductVO productVO = new ProductVO();
             productVO.setCategoryType(productCategory.getCategoryType());
             productVO.setCategoryName(productCategory.getCategoryName());
 
             List<ProductInfoVO> productInfoVOList = new ArrayList<>();
-            for (ProductInfo productInfo: productInfoList) {
+            for (ProductInfo productInfo : productInfoList) {
                 if (productInfo.getCategoryType().equals(productCategory.getCategoryType())) {
                     ProductInfoVO productInfoVO = new ProductInfoVO();
                     BeanUtils.copyProperties(productInfo, productInfoVO);
@@ -70,4 +70,5 @@ public class BuyerProductController {
             productVOList.add(productVO);
         }
         return ResultVOUtil.success(productVOList);
+    }
 }
