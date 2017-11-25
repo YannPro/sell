@@ -1,3 +1,5 @@
+server:
+  port: 80
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -8,3 +10,4 @@ spring:
     show-sql: true
   jackson:
     default-property-inclusion: non_null
+
